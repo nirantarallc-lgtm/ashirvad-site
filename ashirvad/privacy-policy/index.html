@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -100,7 +100,7 @@ text-decoration:underline;
 
 <h1>Ashirvad Privacy Policy</h1>
 <p>Your spiritual journey is personal. We respect and protect your privacy.</p>
-<p>Last Updated: March 2026</p>
+<p>Last Updated: March 15, 2026</p>
 
 </div>
 
@@ -112,13 +112,15 @@ text-decoration:underline;
 <a href="#who">Who We Are</a>
 <a href="#device">Data Stored on Your Device</a>
 <a href="#retention">Data Retention</a>
-<a href="#sankalp">Sankalp Mode</a>
 <a href="#network">Network Connections</a>
-<a href="#permissions">App Permissions</a>
 <a href="#notifications">Notifications</a>
+<a href="#analytics">Analytics</a>
+<a href="#sankalp">Sankalp Mode</a>
+<a href="#camera">Camera and Photo Library</a>
+<a href="#permissions">App Permissions</a>
 <a href="#notcollect">What We Do Not Collect</a>
 <a href="#thirdparty">Third-Party Services</a>
-<a href="#children">ChildrenΓÇÖs Privacy</a>
+<a href="#children">Children's Privacy</a>
 <a href="#changes">Changes to This Policy</a>
 <a href="#contact">Contact Us</a>
 
@@ -130,7 +132,7 @@ text-decoration:underline;
 <h2>Who We Are</h2>
 
 <p>
-Ashirvad ΓÇô Daily Blessings is a mobile application developed by <strong>Nirantara LLP</strong>.
+Ashirvad &ndash; Daily Blessings is a mobile application developed by <strong>Nirantara LLP</strong>.
 The app provides personalised Hindu deity blessings, mantra chanting, and daily spiritual guidance.
 </p>
 
@@ -148,24 +150,24 @@ Support: <a href="mailto:ashirvad.support@nirantara.online">ashirvad.support@nir
 <h2>Data Stored on Your Device</h2>
 
 <p>
-Ashirvad is designed with a privacy-first approach. Most information is stored locally on your mobile device using the deviceΓÇÖs local storage.
+Ashirvad is designed with a privacy-first approach. All of the following is stored only on your device
+using Android&rsquo;s local storage. It is never uploaded to any server and never shared with any third party.
 </p>
-
-<p>This may include:</p>
 
 <ul>
 <li>Your selected deity (e.g. Ganesh, Shiva, Lakshmi)</li>
-<li>Your preferred prayer music</li>
+<li>Your preferred prayer music selection</li>
 <li>Your display name (if entered)</li>
 <li>Your daily prayer streak and prayer history</li>
 <li>Your total prayer time</li>
-<li>Your preferred reminder time</li>
-<li>The list of apps selected for Sankalp Mode blocking</li>
-<li>Sankalp countdown progress if a session is interrupted</li>
+<li>Your preferred notification time</li>
+<li>Custom deity details (name, mantra, image) if created</li>
+<li>Sankalp Mode settings (blocked apps, schedule)</li>
 </ul>
 
 <p>
-This information remains stored only on your device and is not transmitted to our servers.
+You can erase all of this data at any time via:<br>
+<strong>Android Settings &rarr; Apps &rarr; Ashirvad &rarr; Storage &rarr; Clear Data</strong>
 </p>
 
 </div>
@@ -176,30 +178,8 @@ This information remains stored only on your device and is not transmitted to ou
 <h2>Data Retention</h2>
 
 <p>
-All preferences and prayer activity remain stored locally on your device until you uninstall the application or manually clear the application storage through your device settings.
-</p>
-
-</div>
-
-
-<div class="card" id="sankalp">
-
-<h2>Sankalp Mode</h2>
-
-<p>
-Ashirvad includes an optional feature called <strong>Sankalp Mode</strong>. This feature helps users build discipline by requiring a short prayer or countdown before opening selected apps.
-</p>
-
-<p>
-When enabled, the user can select specific applications that should trigger Sankalp Mode.
-</p>
-
-<p>
-To enable this functionality, the app may request permission to access application usage information on the device. This allows the app to detect when a selected application is opened.
-</p>
-
-<p>
-The list of selected apps and Sankalp session progress are stored locally on the device and are never transmitted to external servers.
+All preferences and prayer activity remain stored locally on your device until you uninstall the application
+or manually clear the application storage through your device settings.
 </p>
 
 </div>
@@ -210,50 +190,28 @@ The list of selected apps and Sankalp session progress are stored locally on the
 <h2>Network Connections</h2>
 
 <p>
-The application connects to backend services only to retrieve daily blessing content and related media.
+The app makes the following network requests:
 </p>
 
 <p>
-These requests may include:
+<strong>a) Daily blessing content</strong> &ndash; fetched from our content database (Supabase). This request includes only:
 </p>
 
 <ul>
-<li>The selected deity name</li>
-<li>The current date</li>
+<li>The name of your selected deity</li>
+<li>Today&rsquo;s date</li>
 </ul>
 
 <p>
-The app may also load deity images from image hosting services (including Supabase Storage or other image hosting providers). These requests are used only to display images within the app.
+No device identifiers, no account information, and no personal data are sent.
 </p>
 
 <p>
-No personal identifiers or user information are transmitted with these requests.
+<strong>b) Firebase Analytics</strong> &ndash; see the Analytics section below.
 </p>
 
 <p>
 All connections are secured using HTTPS encryption.
-</p>
-
-</div>
-
-
-<div class="card" id="permissions">
-
-<h2>App Permissions</h2>
-
-<p>
-Ashirvad may request certain device permissions to enable specific features of the application.
-</p>
-
-<ul>
-<li><strong>Internet</strong> ΓÇô used to retrieve daily blessing content and images</li>
-<li><strong>Notifications</strong> ΓÇô used to send optional daily prayer reminders</li>
-<li><strong>Usage Access</strong> ΓÇô used by Sankalp Mode to detect when selected apps are opened</li>
-<li><strong>Boot Completed</strong> ΓÇô used to restore scheduled reminders after the device restarts</li>
-</ul>
-
-<p>
-These permissions are used only to enable app functionality and are not used to collect personal information.
 </p>
 
 </div>
@@ -264,15 +222,118 @@ These permissions are used only to enable app functionality and are not used to 
 <h2>Notifications</h2>
 
 <p>
-If you grant notification permission, the app schedules a daily reminder locally on your device.
+If you grant notification permission, the app schedules a daily reminder locally on your device at your chosen time.
+This is processed entirely on your device &mdash; no notification data is sent to any server.
 </p>
 
 <p>
-Notification scheduling happens entirely on your device and no reminder data is transmitted externally.
+Notifications can be disabled at any time via:<br>
+<strong>Android Settings &rarr; Apps &rarr; Ashirvad &rarr; Notifications</strong>
+</p>
+
+</div>
+
+
+<div class="card" id="analytics">
+
+<h2>Analytics</h2>
+
+<p>
+The app uses <strong>Firebase Analytics</strong> (provided by Google) to understand how features are used and
+improve the experience.
+</p>
+
+<p><strong>Automatically collected by Firebase:</strong></p>
+<ul>
+<li>Device model and operating system version</li>
+<li>Country and language settings</li>
+<li>App version</li>
+<li>Session duration and screen views</li>
+<li>A random anonymous instance ID (not tied to your identity)</li>
+</ul>
+
+<p><strong>Custom events logged by the app (no personal data attached):</strong></p>
+<ul>
+<li><code>blessing_viewed</code> &mdash; a daily blessing was displayed</li>
+<li><code>prayer_started</code> / <code>prayer_completed</code> &mdash; prayer session usage (includes deity name and duration in seconds)</li>
+<li><code>devta_selected</code> &mdash; which deity was chosen during onboarding</li>
+<li><code>onboarding_completed</code> &mdash; the setup flow was finished</li>
+<li><code>sankalp_pause_completed</code> &mdash; a Sankalp mindful pause ended</li>
+<li><code>blessing_shared</code> &mdash; a blessing was shared externally</li>
+</ul>
+
+<p>
+Firebase Analytics does <strong>not</strong> collect your name, email, phone number, precise location, or any
+personally identifiable information. No advertising identifiers are used.
 </p>
 
 <p>
-Notifications can be disabled at any time via your deviceΓÇÖs notification settings.
+You can limit analytics data collection by disabling &ldquo;Usage &amp; diagnostics&rdquo; in your Android device settings.
+</p>
+
+<p>
+Firebase Privacy Policy: <a href="https://firebase.google.com/support/privacy">https://firebase.google.com/support/privacy</a>
+</p>
+
+</div>
+
+
+<div class="card" id="sankalp">
+
+<h2>Sankalp Mode</h2>
+
+<p>
+Sankalp Mode is an optional feature that helps you take mindful pauses when opening selected apps. If you enable it:
+</p>
+
+<ul>
+<li>The app uses the <strong>Usage Access</strong> permission to detect which app is in the foreground.</li>
+<li>The list of apps you choose to block is stored locally on your device.</li>
+<li>A foreground service runs to monitor app launches.</li>
+</ul>
+
+<p>
+This data is processed entirely on your device and is never sent to any server. You can disable Sankalp Mode
+at any time from the app&rsquo;s settings.
+</p>
+
+</div>
+
+
+<div class="card" id="camera">
+
+<h2>Camera and Photo Library</h2>
+
+<p>
+If you create a custom deity, you may optionally take a photo or pick one from your library.
+Camera and photo library access is requested only when you use this feature.
+</p>
+
+<p>
+The image is stored locally on your device and is never uploaded to any server.
+</p>
+
+</div>
+
+
+<div class="card" id="permissions">
+
+<h2>App Permissions</h2>
+
+<p>
+Ashirvad may request the following device permissions to enable specific features:
+</p>
+
+<ul>
+<li><strong>Internet</strong> &ndash; used to retrieve daily blessing content and images</li>
+<li><strong>Notifications</strong> &ndash; used to send optional daily prayer reminders</li>
+<li><strong>Usage Access</strong> &ndash; used by Sankalp Mode to detect when selected apps are opened</li>
+<li><strong>Boot Completed</strong> &ndash; used to restore scheduled reminders after the device restarts</li>
+<li><strong>Camera / Photo Library</strong> &ndash; used optionally when creating a custom deity</li>
+</ul>
+
+<p>
+These permissions are used only to enable app functionality and are not used to collect personal information.
 </p>
 
 </div>
@@ -283,12 +344,12 @@ Notifications can be disabled at any time via your deviceΓÇÖs notification se
 <h2>What We Do Not Collect</h2>
 
 <ul>
-<li>No personal identifiers such as name, email address, or phone number</li>
-<li>No location tracking</li>
-<li>No advertising identifiers</li>
-<li>No analytics or tracking SDKs</li>
-<li>No user accounts</li>
-<li>No sale or sharing of personal data</li>
+<li>We do not collect your name, email, or phone number</li>
+<li>We do not track your precise location</li>
+<li>We do not use advertising networks or ad tracking</li>
+<li>We do not use cookies or web tracking</li>
+<li>We do not create user accounts</li>
+<li>We do not sell or share any personal data with third parties</li>
 </ul>
 
 </div>
@@ -298,20 +359,24 @@ Notifications can be disabled at any time via your deviceΓÇÖs notification se
 
 <h2>Third-Party Services</h2>
 
+<p>The app uses the following third-party services:</p>
+
 <p>
-Ashirvad uses one infrastructure provider:
+<strong>Supabase</strong> (<a href="https://supabase.com">supabase.com</a>)<br>
+Purpose: Hosting blessing content (read-only database)<br>
+Data sent: Selected deity name and today&rsquo;s date only<br>
+Privacy Policy: <a href="https://supabase.com/privacy">https://supabase.com/privacy</a>
 </p>
 
 <p>
-<strong>Supabase</strong><br>
-Purpose: hosting blessing content database<br>
-Data transmitted: selected deity name and current date only<br>
-Privacy Policy:
-<a href="https://supabase.com/privacy">https://supabase.com/privacy</a>
+<strong>Firebase Analytics</strong> (Google)<br>
+Purpose: Anonymous app usage analytics<br>
+Data sent: Anonymous event data (see Analytics section above)<br>
+Privacy Policy: <a href="https://firebase.google.com/support/privacy">https://firebase.google.com/support/privacy</a>
 </p>
 
 <p>
-No advertising networks, analytics services, or tracking tools are used.
+No advertising platforms or ad SDKs are used.
 </p>
 
 </div>
@@ -319,14 +384,16 @@ No advertising networks, analytics services, or tracking tools are used.
 
 <div class="card" id="children">
 
-<h2>ChildrenΓÇÖs Privacy</h2>
+<h2>Children&rsquo;s Privacy</h2>
 
 <p>
-Ashirvad is suitable for users of all ages. The application does not collect personal information from any users, including children under the age of 13.
+Ashirvad is suitable for users of all ages. We do not knowingly collect any personal information
+from anyone, including children under the age of 13.
 </p>
 
 <p>
-All user preferences, prayer activity, and settings are stored locally on the user's device and are not transmitted to external servers.
+All user preferences, prayer activity, and settings are stored locally on the user&rsquo;s device
+and are not transmitted to external servers.
 </p>
 
 <p>
@@ -343,7 +410,7 @@ If you have questions about privacy or data practices in the Ashirvad app, pleas
 
 <p>
 We may update this Privacy Policy from time to time. When changes occur,
-the ΓÇ£Last UpdatedΓÇ¥ date at the top of this page will be revised.
+the &ldquo;Last Updated&rdquo; date at the top of this page will be revised.
 </p>
 
 <p>
@@ -372,7 +439,7 @@ Email: <a href="mailto:ashirvad.support@nirantara.online">ashirvad.support@niran
 
 <div class="footer">
 
-<p>┬⌐ 2026 Nirantara LLP</p>
+<p>&copy; 2026 Nirantara LLP</p>
 <p><a href="https://nirantara.online">nirantara.online</a></p>
 
 </div>
