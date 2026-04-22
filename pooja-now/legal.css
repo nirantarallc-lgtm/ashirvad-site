@@ -1,0 +1,341 @@
+/* ═══════════════════════════════════════════════════════
+   Pooja Now — Legal Pages Shared Stylesheet
+   Nirantara Labs · 2026
+═══════════════════════════════════════════════════════ */
+
+:root {
+    --brand-dark:     #1C140A;
+    --brand-mid:      #3A1C08;
+    --brand-gold:     #C8900A;
+    --brand-gold2:    #E0A820;
+    --brand-gold-lt:  #F0C040;
+    --brand-red:      #8B0000;
+    --bg:             #FDFAF5;
+    --bg-section:     #F7F2EA;
+    --text:           #1A1208;
+    --text-body:      #2C2010;
+    --text-secondary: #5C4A30;
+    --border:         #E0D0B8;
+    --border-lt:      #EDE4D4;
+}
+
+@keyframes rotateW  { from { transform: rotate(0deg) } to { transform: rotate(360deg) } }
+@keyframes pulseB2  { 0%,100% { opacity:.6 } 50% { opacity:1 } }
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+                 'Helvetica Neue', Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text-body);
+    line-height: 1.75;
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* ── Header ─────────────────────────────────────────── */
+header {
+    background: var(--brand-dark);
+    color: #fff;
+    padding: 44px 24px 36px;
+    text-align: center;
+    border-bottom: 3px solid var(--brand-gold);
+    position: relative;
+    overflow: hidden;
+}
+
+header::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at 50% 0%, rgba(200,144,10,.12) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+.header-emblem {
+    display: block;
+    margin: 0 auto 18px;
+    filter: drop-shadow(0 0 12px rgba(200,144,10,.4));
+}
+
+.header-emblem .chakra-wheel {
+    transform-origin: 100px 100px;
+    animation: rotateW 24s linear infinite;
+}
+
+header h1 {
+    font-size: 26px;
+    font-weight: 700;
+    margin-bottom: 6px;
+    color: var(--brand-gold2);
+    letter-spacing: .02em;
+}
+
+header p.tagline {
+    font-size: 13px;
+    color: rgba(240,200,100,.75);
+    margin-bottom: 0;
+    letter-spacing: .04em;
+}
+
+/* ── Breadcrumb ─────────────────────────────────────── */
+nav.breadcrumb {
+    background: var(--brand-mid);
+    padding: 10px 24px;
+    font-size: 13px;
+}
+nav.breadcrumb a { color: var(--brand-gold2); text-decoration: none; }
+nav.breadcrumb a:hover { text-decoration: underline; }
+nav.breadcrumb .sep { color: rgba(255,255,255,.4); margin: 0 7px; }
+nav.breadcrumb .current { color: rgba(255,255,255,.8); }
+
+/* ── Container ──────────────────────────────────────── */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 44px 28px 88px;
+}
+
+/* ── Trust banner ───────────────────────────────────── */
+.trust-banner {
+    background: linear-gradient(135deg, var(--brand-dark) 0%, var(--brand-mid) 100%);
+    border: 1px solid var(--brand-gold);
+    border-radius: 12px;
+    padding: 18px 22px;
+    margin-bottom: 36px;
+    text-align: center;
+    color: var(--brand-gold2);
+    font-size: 15px;
+    font-style: italic;
+    letter-spacing: .01em;
+}
+
+/* ── Effective date ─────────────────────────────────── */
+.effective-date {
+    text-align: center;
+    color: var(--text-secondary);
+    font-size: 14px;
+    margin-bottom: 36px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid var(--border);
+}
+
+/* ── Headings ───────────────────────────────────────── */
+h2 {
+    font-size: 21px;
+    font-weight: 700;
+    color: var(--brand-dark);
+    margin-top: 44px;
+    margin-bottom: 16px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--brand-gold);
+}
+
+h3 {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--brand-mid);
+    margin-top: 26px;
+    margin-bottom: 10px;
+}
+
+p { margin-bottom: 14px; color: var(--text-body); }
+li { margin-bottom: 8px; color: var(--text-body); }
+ul, ol { padding-left: 24px; margin-bottom: 18px; }
+strong { color: var(--brand-dark); }
+
+a { color: var(--brand-gold); text-decoration: none; }
+a:hover { text-decoration: underline; color: var(--brand-gold2); }
+
+/* ── Tables ─────────────────────────────────────────── */
+.table-scroll {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    margin: 16px 0 24px;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+}
+
+table {
+    width: 100%;
+    min-width: 480px;
+    border-collapse: collapse;
+    font-size: 15px;
+}
+
+th {
+    background: var(--brand-dark);
+    color: var(--brand-gold2);
+    text-align: left;
+    padding: 12px 16px;
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: .02em;
+    white-space: nowrap;
+}
+
+td {
+    padding: 12px 16px;
+    border-bottom: 1px solid var(--border-lt);
+    vertical-align: top;
+    color: var(--text-body);
+}
+
+tr:last-child td { border-bottom: none; }
+tr:nth-child(even) td { background: var(--bg-section); }
+
+/* ── Callout boxes ──────────────────────────────────── */
+.highlight {
+    background: #FEF9EC;
+    border-left: 4px solid var(--brand-gold);
+    padding: 16px 20px;
+    margin: 18px 0;
+    border-radius: 0 8px 8px 0;
+    font-size: 15px;
+    color: var(--text-body);
+}
+
+.caution {
+    background: #FFF8E1;
+    border-left: 4px solid #E6A817;
+    padding: 16px 20px;
+    margin: 18px 0;
+    border-radius: 0 8px 8px 0;
+    font-size: 15px;
+    color: #5A3E00;
+}
+
+/* ── Step box (delete account, refund steps) ────────── */
+.step-box {
+    background: var(--brand-dark);
+    border: 1px solid var(--brand-gold);
+    border-radius: 12px;
+    padding: 26px 30px;
+    margin: 24px 0;
+}
+
+.step-box ol {
+    padding-left: 22px;
+    margin-bottom: 0;
+}
+
+.step-box li {
+    color: #F0E8D8;   /* warm cream — high contrast on dark bg */
+    margin-bottom: 12px;
+    font-size: 15px;
+    line-height: 1.65;
+}
+
+.step-box li:last-child { margin-bottom: 0; }
+
+.step-box strong { color: var(--brand-gold2); }
+
+.step-box .step-note {
+    color: #C8BCA0;   /* muted cream — WCAG AA on #1C140A */
+    font-size: 14px;
+    margin-top: 16px;
+    margin-bottom: 0;
+    padding-top: 14px;
+    border-top: 1px solid rgba(200,144,10,.25);
+}
+
+.step-box .step-note a { color: var(--brand-gold2); }
+
+/* ── Contact box ────────────────────────────────────── */
+.contact-box {
+    background: var(--brand-dark);
+    border: 1px solid var(--brand-gold);
+    border-radius: 14px;
+    padding: 32px 28px;
+    margin-top: 40px;
+    text-align: center;
+}
+
+.contact-box h2 {
+    color: var(--brand-gold2) !important;
+    border: none !important;
+    margin-top: 0 !important;
+    padding-bottom: 0 !important;
+    font-size: 20px !important;
+}
+
+.contact-box .contact-body {
+    color: #E0D4BC;   /* WCAG AA on #1C140A: contrast ~7:1 */
+    margin-top: 12px;
+    font-size: 15px;
+}
+
+.contact-box .contact-details {
+    margin-top: 18px;
+    font-size: 17px;
+    color: #F0E8D8;
+    line-height: 1.8;
+}
+
+.contact-box strong { color: var(--brand-gold2); }
+
+.contact-box a { color: var(--brand-gold2); font-weight: 600; }
+.contact-box a:hover { color: var(--brand-gold-lt); }
+
+/* ── Grievance officer box ──────────────────────────── */
+.grievance-box {
+    background: var(--bg-section);
+    border: 1px solid var(--brand-gold);
+    border-radius: 12px;
+    padding: 22px 24px;
+    margin: 20px 0;
+}
+
+.grievance-box h3 {
+    color: var(--brand-dark);
+    margin-top: 0;
+    margin-bottom: 12px;
+}
+
+/* ── Footer ─────────────────────────────────────────── */
+footer {
+    text-align: center;
+    padding: 28px 24px;
+    font-size: 13px;
+    color: var(--text-secondary);
+    border-top: 1px solid var(--border);
+    background: var(--bg-section);
+}
+
+footer a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    margin: 0 6px;
+}
+
+footer a:hover { color: var(--brand-gold); text-decoration: underline; }
+
+footer .footer-brand {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+footer .footer-emblem { opacity: .6; }
+
+footer .footer-links { margin-top: 8px; }
+
+footer .sep { margin: 0 4px; color: var(--border); }
+
+/* ── Responsive ─────────────────────────────────────── */
+@media (max-width: 640px) {
+    header { padding: 32px 16px 28px; }
+    header h1 { font-size: 21px; }
+    .header-emblem { width: 52px; height: 52px; }
+    .container { padding: 28px 18px 64px; }
+    h2 { font-size: 18px; margin-top: 36px; }
+    h3 { font-size: 15px; }
+    .step-box { padding: 20px 18px; }
+    .contact-box { padding: 24px 18px; }
+    .trust-banner { font-size: 14px; padding: 14px 16px; }
+}
